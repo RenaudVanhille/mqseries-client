@@ -4,7 +4,7 @@
 #include <cmqc.h>
 #include <string>
 
-#include "../CSingleton.h"
+#include "../CSingleton/CSingleton.h"
 
 namespace mqclient
 {

@@ -1,4 +1,5 @@
 .idea
+build
 
 # CMake
 cmake-build-debug/
