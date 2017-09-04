@@ -5,6 +5,7 @@
 #include "Common/Init.h"
 #include "Common/Close.h"
 #include "Common/On.h"
+#include "Common/Send.h"
 
 #include "Promise/CPromiseRunner.h"
 
@@ -17,6 +18,7 @@ namespace mqclient
         NODE_SET_METHOD(exports, "init", CPromiseRunner<SInit>::Do);
         NODE_SET_METHOD(exports, "close", CPromiseRunner<SClose>::Do);
         NODE_SET_METHOD(exports, "on", CPromiseRunner<SOn>::Do);
+        NODE_SET_METHOD(exports, "publish", CPromiseRunner<SSend>::Do);
     }
 
     NODE_MODULE(NodePlanif, InitAll)

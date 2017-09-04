@@ -11,10 +11,6 @@ function SendPub(i) {
         );
 }
 
-pub.init('QM2', 'sport').then(
-        () => { SendPub(0).then(
-                () => {},
-                (reason) => {console.error(reason); }
-        ); },
-        (reason) => { console.error(reason); }
-);
+pub.init('QM2', 'sport').then(() => {
+    return SendPub(0).then(console.log, console.error)
+    }, console.error);
