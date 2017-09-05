@@ -3,6 +3,7 @@
 
 #include "../Promise/CPromiseData.h"
 #include "../Sub/CSub.h"
+#include "../Pub/CPub.h"
 
 using v8::FunctionCallbackInfo;
 using v8::String;
@@ -43,7 +44,7 @@ namespace mqclient
 		static void Run(CPromiseData* pData)
 		{
 			const SArgs* pArgs = static_cast<const SArgs*>(pData->GetArgs());
-			pData->Set("", SUB.Init(pArgs->m_strQM, pArgs->m_strTopic));
+			pData->Set("", PUB.Init(pArgs->m_strQM, pArgs->m_strTopic));
 		}
 	};
 }
